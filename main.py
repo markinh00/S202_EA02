@@ -2,7 +2,7 @@ from database import Database
 from family import Family
 
 db = Database("bolt://44.203.249.152:7687", "neo4j", "quarter-doorsteps-ways")
-#db.drop_all()
+# db.drop_all()
 family_db = Family(db)
 
 # returns someone's children
