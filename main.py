@@ -8,16 +8,16 @@ family_db = Family(db)
 # returns someone's children
 children = family_db.get_children({"key": "nome", "value": "Amanda"})
 for value in children:
-    print("Amanda's child", value)
+    print("Amanda's child", value["pessoa"])
 
 # returns someone's spouse
 spouse = family_db.get_spouse({"key": "nome", "value": "Pedro"})
 for value in spouse:
-    print("Pedro's spouse", value)
+    print("Pedro's spouse", value["pessoa"])
 
 # returns a pet's owner
 owner = family_db.get_owner({"key": "nome", "value": "Salem"})
 for value in owner:
-    print("Salem's spouse", value)
+    print("Salem's spouse", value["pessoa"])
 
 db.close()
